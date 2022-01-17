@@ -7,14 +7,7 @@ const uglify                       = require('gulp-uglify-es').default;
 const autoprefixer                 = require('gulp-autoprefixer');
 const imagemin                     = require('gulp-imagemin');
 const del                          = require('del');
-const ghPages                      = require('gh-pages');
 
-
-
-function deploy(cb) {
-    ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
 
 function browsersync() {
     browserSync.init({
