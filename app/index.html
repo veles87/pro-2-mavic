@@ -39,7 +39,7 @@
             </nav>
             <div class="header__info">
             <button class="header__btn">КУПИТЬ</button>
-            <a class="header__phone" href="tel:8(050)5676767">8 (050) 567 67 67</a>
+            <a class="header__phone" href="tel:8(050)5676767">+38 (050) 567 67 67</a>
             </div>
         </div>
         </div>
@@ -65,12 +65,14 @@
                     </ul>
             </div>
         </div>
-        <div class="scroll__btn"><a href="#">
+        <div class="scroll__btn">
+            <a href="#products">
             <img src="./images/arrows/arrow-down.svg" alt="">
-        </a></div>
+            </a>
+        </div>
     </section>
     <!-- second page -->
-    <section class="page-section products">
+    <section id="products" class="page-section products">
         <div class="container">
             <h3 class="title products__title">Что такое Mavic 2 Pro?</h3>
             <div class="products__inner">
@@ -108,12 +110,14 @@
                 </div>
             </div>
         </div>
-        <div class="scroll__btn"><a href="#">
-            <img src="./images/arrow-down.svg" alt="">
-        </a></div>
+        <div class="scroll__btn">
+            <a href="#benefits">
+            <img src="./images/arrows/arrow-down.svg" alt="">
+            </a>
+        </div>
     </section>
     <!-- third page -->
-    <section class="page-section benefits">
+    <section id="benefits" class="page-section benefits">
         <div class="container">
             <h3 class="title benefits__title">
                 Преимущества
@@ -185,12 +189,12 @@
             </div>
             </div>
         </div>
-        <div class="scroll__btn"><a href="#">
-            <img src="./images/arrow-down.svg" alt="">
+        <div class="scroll__btn"><a href="#specification">
+            <img src="./images/arrows/arrow-down.svg" alt="">
         </a></div>
     </section>
     <!-- fourth page -->
-    <section class="page-section specification">
+    <section id="specification" class="page-section specification">
         <div class="container">
             <h3 class="title specification__title">
                 Характеристики
@@ -237,12 +241,13 @@
                 </div>
             </div>
         </div>
-        <div class="scroll__btn"><a href="#">
-            <img src="./images/arrow-down.svg" alt="">
-        </a></div>
+        <div class="scroll__btn"><a href="#questions">
+            <img src="./images/arrows/arrow-down.svg" alt="">
+        </a>
+        </div>
     </section>
     <!-- fifth page -->
-    <section class="page-section questions">
+    <section id="questions" class="page-section questions">
         <div class="container">
             <h3 class="title">Остались вопросы?</h3>
             <div class="questions__items">
@@ -280,19 +285,87 @@
                 </div>
             </div>
         </div>
-        <div class="scroll__btn"><a href="#">
-            <img src="./images/arrow-down.svg" alt="">
+        <div class="scroll__btn"><a href="#contacts">
+            <img src="./images/arrows/arrow-down.svg" alt="">
         </a></div>
     </section>
     <!-- sixth page -->
-    <section class="page-section contacts">
+    <section id="contacts" class="page-section contacts">
         <div class="container">
             <h3 class="title">Контакты</h3>
             <div class="contacts__inner">
-                
+                <div class="contacts__info">
+                    <div class="contacts__info-box">
+
+                        <p class="contacts__info-title">
+                            Киев
+                        </p>
+                        <a class="contacts__info-phone" href="tel:+38(050)5676767">
+                            +38 (050) 567 67 67
+                        </a>
+                        <a class="contacts__info-mail" href="mailto:dgi.mavic2pro.kiev@gmail.com">dgi.mavic2pro.kiev@gmail.com</a>
+
+                    </div>
+                    <div class="contacts__info-box">
+
+                        <p class="contacts__info-title">
+                            Москва
+                        </p>
+                        <a class="contacts__info-phone" href="tel:+7(499)5676767">
+                            +7 (499) 567 67 67
+                        </a>
+                        <a class="contacts__info-mail" href="mailto:dgi.mavic2pro.moscow@mail.ru">dgi.mavic2pro.moscow@mail.ru</a>
+
+                    </div>
+                    <div class="contacts__info-box">
+
+                        <p class="contacts__info-title">
+                            Минск
+                        </p>
+                        <a class="contacts__info-phone" href="tel:+3(7517)5676767">
+                            +3 (7517) 567 67 67
+                        </a>
+                        <a class="contacts__info-mail" href="mailto:dgi.mavic2pro.minsk@gmail.com">dgi.mavic2pro.minsk@gmail.com</a>
+
+                    </div>
+                </div>
+                <div class="contacts__form">
+                    <form action="">
+                        <h4 class="contacts__form-title">
+                            Остались вопросы?
+                        </h4>
+                        <p class="contacts__form-text">
+                            Мы обязательно свяжемся с вами в течение двух рабочих дней
+                        </p>
+                        <div class="contacts__form-line">
+                            <input class="contacts__form-input" placeholder="Ваше имя" type="text">
+                            <input class="contacts__form-input" placeholder="Ваше e-mail" type="email">
+                        </div>
+                        <textarea class="contacts__form-textarea" placeholder="Что вас интересует?"></textarea>
+                        <button class="contacts__form-btn" type="submit">ОТПРАВИТЬ</button>
+                    </form>
+                </div>
+                <ul class="contacts__social-list">
+                    <li class="contacts__social-item">
+                        <a class="contacts__social-link" href="#"><img src="./images/social-icons/fb.svg" alt=""></a>
+                    </li>
+                    <li class="contacts__social-item">
+                        <a class="contacts__social-link" href="#"><img src="./images/social-icons/youtube.svg" alt=""></a>
+                    </li>
+                    <li class="contacts__social-item">
+                        <a class="contacts__social-link" href="#"><img src="./images/social-icons/inst.svg" alt=""></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
+<!-- foter -->
+    <foter class="foter">
+        <div class="container">
+            <p class="footer__copy">© DJI, 2020</p>
+        </div>
+    </foter>
+<!-- add js scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     </body>
