@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    left: 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+    }
+
+    &__info {
+    }
+
+    &__btn {
+    }
+
+    &__phone {
+    }
+}
+
+// .logo {
+
+//     &__img {
+//     }
+// }
+// .menu {
+
+//     &__list {
+//     }
+
+//     &__list-item {
+//     }
+
+//     &__list-link {
+//     }
+// }
