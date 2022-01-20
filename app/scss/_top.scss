@@ -1,0 +1,47 @@
+
+.top {
+        background-image: url(../images/background/first-bg.png);
+		&__inner {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+		}
+
+		&__title {
+            @extend%sf-semibold;
+            font-size: 96px;
+            line-height: 115px;
+            margin-bottom: 20px;
+            margin-top: 144px;
+		}
+
+		&__text {
+            max-width: 325px;
+            margin: 25px 0 35px;
+            opacity: 0.7;
+		}
+
+		&__social-list {
+		}
+
+		&__social-item {
+            display: inline-block;
+            margin: 0 25px;
+		}
+
+		&__social-link {
+            transition: all 0.3s;
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+                transform: 0.5;
+            }
+		}
+}
+
+.scroll {
+
+		&__btn {
+		}
+}

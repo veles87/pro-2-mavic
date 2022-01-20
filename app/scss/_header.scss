@@ -3,21 +3,37 @@
     top: 30px;
     right: 0;
     left: 0;
+    z-index: 10;
 
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         min-height: 30px;
+        text-transform: uppercase;
+        font-size: 15px;
+        line-height: 113%;
+        @extend %ubuntu-medium;
     }
 
     &__info {
     }
 
     &__btn {
+        background-color: transparent;
+        color: #fff;
+        padding: 6px 28px;
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 8px;
+        text-transform: uppercase;
     }
 
     &__phone {
+        @extend %ubuntu-bold;
+        font-size: 16px;
+        line-height: 112%;
     }
 }
 
@@ -26,14 +42,18 @@
 //     &__img {
 //     }
 // }
-// .menu {
+.menu {
 
-//     &__list {
-//     }
+    // &__list {
+    // }
 
-//     &__list-item {
-//     }
+    &__list-item {
+        display: inline-block;
+        & +.menu__list-item{
+            padding-left: 20px;
+        }
+    }
 
-//     &__list-link {
-//     }
-// }
+    &__list-link {
+    }
+}
