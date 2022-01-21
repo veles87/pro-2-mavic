@@ -1,0 +1,36 @@
+
+.products {
+
+		&__inner {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 50px;
+		}
+
+		&__text {
+            max-width: 450px;
+            p{
+                margin-bottom: 30px;
+            }
+		}
+
+		&__slider-box {
+		}
+
+		&__slider-text {
+		}
+
+		&__slider {
+            max-width: 560px;
+		}
+
+		&__slider-item {
+		}
+
+		&__slider-img {
+		}
+}
+
+.title {
+}
+
