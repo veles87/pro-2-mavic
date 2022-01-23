@@ -33,6 +33,15 @@
 
 		&__slider {
             max-width: 560px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 565px;
+                height: 283px;
+                border: 4px solid #fff;
+                top: -15px;
+                right: -19px;
+            }
 		}
 
 		&__slider-img {
