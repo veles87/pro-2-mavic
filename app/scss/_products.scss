@@ -40,10 +40,12 @@
 		}
 
 		&__slider-img {
+            margin-bottom: 5px;
 		}
 }
 .slider-btn{
     padding: 16px 26px;
+    margin-top: 5px;
     border: none;
     background-color: #fff;
     position: absolute;
@@ -51,12 +53,19 @@
     right: 0;
     cursor: pointer;
     z-index: 5;
+    border-radius: 10px;
     svg{
         stroke: #000;
     }
     &__left{
         right: 60px;
         margin-right: 5px;
+    }
+    &.slick-disabled{
+        background-color: black;
+        svg{
+            stroke: white;
+        }
     }
 }
 
