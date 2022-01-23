@@ -24,7 +24,7 @@
             width: 282px;
             position: absolute;
             text-align: right;
-            @extend%ubuntu-medium;
+            @extend %ubuntu-medium;
             font-size: 24px;
             line-height: 116%;
             bottom: 30px;
@@ -33,7 +33,6 @@
 
 		&__slider {
             max-width: 560px;
-            // max-height: 300px;
 		}
 
 		&__slider-img {
