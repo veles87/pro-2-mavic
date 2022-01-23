@@ -24,7 +24,7 @@
             width: 282px;
             position: absolute;
             text-align: right;
-            @extend %ubuntu-medium;
+            @extend%ubuntu-medium;
             font-size: 24px;
             line-height: 116%;
             bottom: 30px;
@@ -35,7 +35,7 @@
             max-width: 560px;
             // max-height: 300px;
 		}
-        
+
 		&__slider-img {
             margin-bottom: 5px;
 		}
@@ -49,7 +49,7 @@
     bottom: -53px;
     right: 0;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
     border-radius: 10px;
     svg{
         stroke: #000;
