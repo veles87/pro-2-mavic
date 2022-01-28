@@ -1,24 +1,60 @@
 .benefits {
 
 		&__items {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
 		}
 
 		&__item {
+			margin-bottom: 100px;
+			display: flex;
+			align-items: flex-end;
+			&:nth-child(even){
+				padding-top: 15px;
+			}
 		}
 
 		&__num {
+			@extend %ubuntu-bold;
+			font-size: 36px;
+			line-height: 113%;
+			margin-right: 8px;
 		}
 
 		&__img {
+			position: relative;
+			z-index: 2;
+			margin-right: 32px;
+			&::before{
+				content: "";
+				position: absolute;
+				width: 193px;
+				height: 128px;
+				border: 2px solid #FFFFFF;
+				right: -12px;
+				top: -12px;
+				z-index: -1;
+			}
 		}
 
 		&__info {
+			width: 300px;
 		}
 
 		&__info-title {
+			width: 123px;
+			@extend %ubuntu-bold;
+			font-size: 21px;
+			line-height: 114%;
+			margin-bottom: 10px;
 		}
 
 		&__info-text {
+			width: 300px;
+			@extend %ubuntu-light;
+			font-size: 15px;
+			line-height: 130%;
 		}
 }
 
