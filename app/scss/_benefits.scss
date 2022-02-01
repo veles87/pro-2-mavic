@@ -2,8 +2,8 @@
 
 		&__items {
 			display: flex;
-			justify-content: space-between;
 			flex-wrap: wrap;
+			padding-left: 25px;
 		}
 
 		&__item {
@@ -11,9 +11,47 @@
 			display: flex;
 			align-items: flex-end;
 			&:nth-child(even){
-				padding-top: 15px;
+				margin-left: 40px;
+				transform: translateY(25px);
 			}
 		}
+		&__item-1,
+		&__item-3{
+			position: relative;
+			&::before,
+			&::after{
+				content: "";
+				position: absolute;
+				z-index: 10;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+			}
+		}
+		&__item-1{
+			&::before{
+				height: 55px;
+				width: 245px;
+				background-image: url('../images/arrows/1-2.png');
+				right: -55px;
+				top: 30px;
+			}
+			}
+			&__item-3{
+				&::before{
+					background-image: url(../images/arrows/3-4.png);
+					width: 254px;
+					height: 42px;
+					top: 54px;
+					right: -55px;
+				}
+				&::after{
+					width: 463px;
+					height: 67px;
+					top: -79px;
+					right: -54px;
+					background-image: url(../images/arrows/2-3.png);
+					}
+			}
 
 		&__num {
 			@extend %ubuntu-bold;
