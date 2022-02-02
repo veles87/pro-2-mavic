@@ -14,9 +14,14 @@
 				margin-left: 40px;
 				transform: translateY(25px);
 			}
-		}
-		&__item-1,
-		&__item-3{
+			&:nth-child(3){
+				margin-left: 30px;
+			}
+			&:nth-child(4){
+				margin-left: 36px;
+			}
+			&:first-child,
+			&:nth-child(3){
 			position: relative;
 			&::before,
 			&::after{
@@ -27,16 +32,16 @@
 				background-position: 0 0;
 			}
 		}
-		&__item-1{
-			&::before{
+			&:first-child{
+				&::before{
 				height: 55px;
 				width: 245px;
 				background-image: url('../images/arrows/1-2.png');
 				right: -55px;
 				top: 30px;
+				}
 			}
-			}
-			&__item-3{
+			&:nth-child(3){
 				&::before{
 					background-image: url(../images/arrows/3-4.png);
 					width: 254px;
@@ -52,6 +57,7 @@
 					background-image: url(../images/arrows/2-3.png);
 					}
 			}
+		}
 
 		&__num {
 			@extend %ubuntu-bold;

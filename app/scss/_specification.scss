@@ -1,22 +1,75 @@
-.page-section {
-}
 .specification {
-
-		&__title {
-		}
-
 		&__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 77px;
+            margin-bottom: 100px;
 		}
 
-		&__item {
+		&__item--center {
+            margin-right: -15px;
+            margin-left: -15px;
 		}
 
 		&__box {
+            width: 280px;
+            position: relative;
+            margin-top: 10px;
+            &::before{
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
 		}
 
+        &__box-2{
+            margin-top: 140px;
+        }
+        &__box-4{
+            margin-top: 150px;
+        }
+
+        &__box-1::before{
+            background-image: url('../images/arrows/point-1.png');
+            width: 229px;
+            height: 114px;
+            right: -182px;
+            top: 7px;
+        }
+        &__box-2::before{
+            background-image: url('../images/arrows/point-2.png');
+            width: 346px;
+            height: 81px;
+            right: -325px;
+            top: -72px;
+        }
+        &__box-3::before{
+            background-image: url('../images/arrows/point-3.png');
+            width: 258px;
+            height: 103px;
+            left: -280px;
+            top: 10px;
+        }
+        &__box-4::before{
+            background-image: url('../images/arrows/point-4.png');
+            width: 124px;
+            height: 89px;
+            left: -140px;
+            top: -75px;
+        }
+
 		&__box-title {
+            @extend %ubuntu-bold;
+            font-size: 21px;
+            line-height: 133%;
+            margin-bottom: 10px;
 		}
 
 		&__box-text {
+            @extend %ubuntu-light;
+            font-size: 15px;
+            line-height: 130%;
 		}
 }
