@@ -1,0 +1,49 @@
+
+.questions {
+
+		&__items {
+            max-width: 757px;
+            padding-bottom: 20px;
+		}
+
+		&__item {
+            max-width: 690px;
+            background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		&__item-title {
+            position: relative;
+            @extend %ubuntu-medium;
+            font-size: 21px;
+            line-height: 133%;
+            color: rgba(#ffffff, .8);
+            padding: 20px 10px 24px 40px;
+            &::after{
+                content: url(../images/arrows/down.svg);
+                cursor: pointer;
+                position: absolute;
+                width: 72px;
+                height: 67px;
+                background-color: #fff;
+                top: 0;
+                right: -72px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+		}
+
+		&__item-text {
+            @extend %ubuntu-light;
+            font-size: 15px;
+            line-height: 150%;
+            padding: 0 5px 75px 50px;
+            margin: 0;
+            display: none;
+		}
+        &__item.questions__item--active{
+            .questions__item-text{
+            display: block;
+            }
+        }
+}
