@@ -59,6 +59,7 @@ a{
 }
 
 .page-section{
+    position: relative;
     min-height: 100vh;
     background-image: url(../images/background/second-bg.png);
     background-repeat: no-repeat;
@@ -74,7 +75,7 @@ a{
     position: absolute;
     left: 0;
     right: 0;
-    // bottom: 0;
+    bottom: 0;
 }
 
 .title{

@@ -4,11 +4,23 @@
 		&__items {
             max-width: 757px;
             padding-bottom: 20px;
+            position: relative;
 		}
 
 		&__item {
             max-width: 690px;
             background-color: rgba(0, 0, 0, 0.3);
+            position: relative;
+            &:nth-child(3)::before{
+                        content: "";
+                        position: absolute;
+                        width: 319px;
+                        height: 125px;
+                        top: -33px;
+                        right: -386px;
+                        background-image: url(../images/questions-img/questions.png);
+                        background-repeat: no-repeat;
+            }
 		}
 
 		&__item-title {
@@ -17,19 +29,20 @@
             font-size: 21px;
             line-height: 133%;
             color: rgba(#ffffff, .8);
-            padding: 20px 10px 24px 40px;
+            padding: 20px 10px 20px 40px;
+            margin-bottom: 5px;
             &::after{
-                content: url(../images/arrows/down.svg);
-                cursor: pointer;
-                position: absolute;
-                width: 72px;
-                height: 67px;
-                background-color: #fff;
-                top: 0;
-                right: -72px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            content: url(../images/arrows/down.svg);
+            cursor: pointer;
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            top: 0;
+            right: -72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             }
 		}
 
@@ -41,9 +54,13 @@
             margin: 0;
             display: none;
 		}
-        &__item.questions__item--active{
+            &__item.questions__item--active{
+                  margin-bottom: 5px;
+            .questions__item-title::after{
+            transform: rotate(180deg);
+            }
             .questions__item-text{
             display: block;
             }
-        }
+      }
 }
