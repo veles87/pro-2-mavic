@@ -61,7 +61,15 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		&__form-input,
+		&__form-textarea{
+			@extend %ubuntu-regular;
+			font-size: 13px;
+			line-height: 130%;
+			color: #fff;
+			opacity: 0.4;
 
+		}
 		&__form-input {
 			width: 45%;
 			background: rgba(0, 0, 0, 0.5);
