@@ -35,9 +35,6 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/normalize.css/normalize.css',
-        'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/fullpage.js/dist/fullpage.css',
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))
@@ -47,7 +44,8 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/style.scss'
+)
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
