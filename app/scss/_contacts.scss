@@ -70,40 +70,87 @@
 			opacity: 0.4;
 
 		}
-		&__form-input {
-			width: 45%;
+		&__form-input,
+		&__form-textarea{
 			background: rgba(0, 0, 0, 0.5);
 			opacity: 0.95;
 			border: none;
 			padding: 15px;
 			color: #fff;
+			&::placeholder{
+				color: #fff;
+				opacity: 0.4;
+			}
+		}
+
+		&__form-input {
+			width: 49%;
 			margin-bottom: 10px;
 		}
 
 		&__form-textarea {
-			background: rgba(0, 0, 0, 0.5);
-			opacity: 0.95;
-			border: none;
-			color: #fff;
+			min-height: 104px;
+			width: 100%;
+			resize: none;
+			margin-bottom: 20px;
 		}
 
 		&__form-btn {
+			text-transform: uppercase;
+			@extend %ubuntu-bold;
+			font-size: 14px;
+			line-height: 114%;
+			letter-spacing: 0.03em;
+			color: #fff;
+			padding: 9px 15px;
+			border: 1px solid #FFFFFF;
+			border-radius: 2px;
+			background-color: transparent;
+			cursor: pointer;
+			&:hover{
+				color: #000;
+				background-color: #fff;
+				padding: 10px 32px;
+				transition: all 0.2s;
+			}
 		}
 
 		&__social-list {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
 		}
 
 		&__social-item {
+			&:first-child{
+				margin-bottom: 28px;
+			}
+			&:nth-child(2){
+				margin-bottom: 24px;
+			}
+			// margin: 12px 0;
 		}
 
 		&__social-link {
+			transition: all 0.3s;
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+                transform: 0.5;
+            }
 		}
 
-		.foter {
-		}
 		.footer {
-		
-				&__copy {
-				}
+			position: absolute;
+			bottom: 32px;
+			left: 0;
+			right: 0;
+			&__copy {
+				text-align: right;
+				@extend %ubuntu-light;
+				font-size: 13px;
+				line-height: 130%;
+				opacity: 0.4;
+			}
 		}
 	}
