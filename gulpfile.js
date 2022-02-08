@@ -7,6 +7,13 @@ const uglify                       = require('gulp-uglify-es').default;
 const autoprefixer                 = require('gulp-autoprefixer');
 const imagemin                     = require('gulp-imagemin');
 const del                          = require('del');
+const ghPages                      = require('gh-pages');
+
+
+function deploy(cb) {
+    ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 function browsersync() {
     browserSync.init({
@@ -29,23 +36,24 @@ function images() {
                 ]
             })
         ]))
-    .pipe(dest('./dist/images'));
+    .pipe(dest('./dist/images'))
 }
 
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        "node_modules/slick-carousel/slick/slick.js",
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream())
 }
 
 function styles() {
     return src(['node_modules/slick-carousel/slick/slick.scss',
-        'app/scss/style.scss'])
+    'app/scss/style.scss'])
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -53,11 +61,11 @@ function styles() {
             grid: true
         }))
         .pipe(dest('app/css'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream())
 }
 
 function cleanDist() {
-    return del('dist');
+    return del('dist')
 }
 
 function build() {
@@ -65,10 +73,9 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
-        'app/js/main.js',
         'app/*.html'
     ], {base: 'app'})
-    .pipe (dest('dist'));
+    .pipe (dest('dist'))
 }
 
 function watching(){
